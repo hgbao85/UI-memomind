@@ -1,0 +1,72 @@
+.app-container {
+    display: flex;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    width: 300px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-right: 1px solid #dee2e6;
+  }
+  
+  .editor {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .note-list {
+    max-height: 500px;
+    overflow-y: auto;
+  }
+  
+/* Đảm bảo thông báo xuất hiện ở giữa màn hình */
+.Toastify__toast-container {
+  position: fixed;         /* Đặt vị trí cố định để phủ toàn bộ màn hình */
+  top: 50%;                /* Canh giữa theo chiều dọc */
+  left: 50%;               /* Canh giữa theo chiều ngang */
+  transform: translate(-50%, -50%); /* Dịch chuyển để căn giữa */
+  z-index: 9999;           /* Đảm bảo thông báo luôn nằm trên các thành phần khác */
+  pointer-events: none;    /* Vô hiệu hóa tương tác với toàn bộ container */
+}
+
+.Toastify__toast {
+  pointer-events: all;     /* Cho phép tương tác với các thành phần bên trong thông báo */
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: #4caf50; /* Màu nền của thông báo */
+  color: white;            /* Màu chữ */
+}
+
+.toast-buttons {
+  margin-top: 10px;
+}
+
+.toast-buttons button {
+  margin: 0 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #f44336; /* Màu nút xóa */
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.toast-buttons .cancel-button {
+  background-color: #4caf50; /* Màu nút hủy */
+}
+
+.Toastify__toast--info {
+  background-color: #2196f3; /* Thông báo thông tin màu xanh dương */
+}
+
+.Toastify__toast--success {
+  background-color: #4caf50; /* Thông báo thành công màu xanh lá */
+}
+
+.Toastify__toast--error {
+  background-color: #f44336; /* Thông báo lỗi màu đỏ */
+}
