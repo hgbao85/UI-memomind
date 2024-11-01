@@ -1,3 +1,4 @@
+// NoteList.js
 import React from 'react';
 
 const NoteList = ({ notes, onSelectNote, onDeleteNote }) => {

@@ -1,3 +1,4 @@
+// NoteEditor.js
 import React, { useEffect, useState } from 'react';
 
 const NoteEditor = ({ selectedNote, onSaveNote }) => {

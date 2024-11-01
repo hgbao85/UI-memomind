@@ -1,10 +1,12 @@
+/* eslint-disable react/jsx-no-undef */
+// App.js
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NoteList from './components/NoteList';
 import NoteEditor from './components/NoteEditor';
+import Chat from './components/Chat'
 import './App.css'; // Import file CSS để tùy chỉnh giao diện
-
 const App = () => {
   const [notes, setNotes] = useState([
     { id: 1, title: 'Ghi chú 1', content: 'Nội dung ghi chú 1' },
@@ -125,7 +127,7 @@ const App = () => {
   return (
     <div className="app-container">
       <ToastContainer />
-      <div className="sidebar">
+      <div className="left-sidebar">
         <h2>Danh sách ghi chú</h2>
         <NoteList notes={notes} onSelectNote={handleSelectNote} onDeleteNote={handleDeleteNote} />
       </div>
@@ -134,8 +136,12 @@ const App = () => {
         {selectedNote ? (
           <NoteEditor selectedNote={selectedNote} onSaveNote={handleSaveNote} />
         ) : (
-          <p>Chọn một ghi chú để chỉnh sửa.</p>
+          <p>Tạo ghi chú mới hoặc chọn một ghi chú để chỉnh sửa.</p>
         )}
+      </div>
+      <div className="right-sidebar"> {/* Sidebar bên phải cho chức năng chat */}
+        <h2>Mindmap</h2>
+        <Chat />
       </div>
     </div>
   );

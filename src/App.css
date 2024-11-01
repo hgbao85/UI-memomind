@@ -1,23 +1,45 @@
 .app-container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .sidebar {
-    width: 300px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-right: 1px solid #dee2e6;
-  }
-  
-  .editor {
-    flex: 1;
-    padding: 20px;
-  }
-  
+  display: flex;
+  height: 100vh;
+}
+
+.left-sidebar {
+  width: 300px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-right: 1px solid #dee2e6;
+}
+
+.editor {
+  flex: 1;
+  padding: 20px;
+}
+.right-sidebar {
+  width: 300px; /* Chiều rộng cho sidebar chat */
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-left: 1px solid #dee2e6;
+}
   .note-list {
     max-height: 500px;
     overflow-y: auto;
+  }
+
+  .chat-window {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  .user {
+    text-align: right;
+    color: blue; /* Màu cho tin nhắn của người dùng */
+  }
+  
+  .ai {
+    text-align: left;
+    color: green; /* Màu cho tin nhắn của AI */
   }
   
 /* Đảm bảo thông báo xuất hiện ở giữa màn hình */
